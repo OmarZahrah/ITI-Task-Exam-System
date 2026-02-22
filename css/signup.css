@@ -1,0 +1,125 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background:#171c2e;
+       
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-top: 70px;
+    
+    
+}
+
+.form-container {
+    background:#1d243b;
+       
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+    color:white;
+    margin: 40px auto;
+        border: 2px solid #2c3553;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: 0,3s;
+    background-color: #171c2e;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #6a11cb;
+    outline: none;
+box-shadow: 0 0 5px #fff,
+        0 0 20px rgba(106, 17, 203, 0.35);
+        transition: .2s ease;
+            background-color: #171c2e;
+
+        
+}
+
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #373d54;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#errorMessages {
+    margin-top: 15px;
+    color: #a04d44;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.error {
+    color: white;
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: block;
+    border-color: #e74c3c;
+
+}
+
+.success {
+    color: white; 
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    /* border-color: #2ecc71; */
+
+}
+
+input.error {
+    border: 2px solid #e74c3c !important;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+input.success {
+    border: 2px solid #2ecc71 !important;
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+}
