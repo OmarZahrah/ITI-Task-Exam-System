@@ -1,25 +1,54 @@
+import { validateInput, emailRegex, passwordRegex, getUsers,saveUsers} from "./utils.js";
 
 const form = document.getElementById("registrationForm");
+
 const firstname = document.getElementById("firstname");
 const lastname = document.getElementById("lastname");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const cpassword = document.getElementById("cpassword");
 
+validateInput(firstname, null, "firstnameError");
+validateInput(lastname, null, "lastnameError");
+validateInput(email, emailRegex, "emailError", "Email must be like example@gmail.com");
+validateInput(password, passwordRegex, "passwordError", "Password must be at least 5 characters");
+
+cpassword.addEventListener("input", function () {
+
+    cpassword.classList.remove("error", "success");
+
+    if (cpassword.value !== password.value || cpassword.value.trim() === "") {
+
+        cpassword.classList.add("error");
+        document.getElementById("confirmpassworderror").textContent = "Passwords do not match";
+
+    } else {
+
+        cpassword.classList.add("success");
+        document.getElementById("confirmpassworderror").textContent = "";
+    }
+
+});
+
 form.addEventListener("submit", function (e) {
+
     e.preventDefault();
 
-    if (firstname.value && lastname.value && emailRegex.test(email.value) && passwordRegex.test(password.value) && password.value === cpassword.value) {
-        saveUser({
-            firstname: firstname.value,
-            lastname: lastname.value,
-            email: email.value,
-            password: password.value
-        });
-        alert("Signup Successful");
-        form.reset();
-        window.location.href = "login.html";
-    } else {
-        alert("Please check your inputs");
-    }
+    let users = getUsers();
+
+    let user = {
+        firstname: firstname.value,
+        lastname: lastname.value,
+        email: email.value,
+        password: password.value
+    };
+
+    users.push(user);
+
+    saveUsers(users);
+
+    alert("Signup Successful");
+
+    window.location.href = "login.html";
+
 });

@@ -110,7 +110,6 @@ button:active {
     font-weight: bold;
     display: block;
     margin-top: 10px;
-    /* border-color: #2ecc71; */
 
 }
 
@@ -122,4 +121,8 @@ input.error {
 input.success {
     border: 2px solid #2ecc71 !important;
     box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+}
+input:-webkit-autofill {
+    background-color: #171c2e !important;
+    color: white !important;
 }

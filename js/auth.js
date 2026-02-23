@@ -1,4 +1,9 @@
+import { getCurrentUser } from "./utils.js";
+
 const user = getCurrentUser();
+
 if (!user) {
-    window.location.href = "login.html";
+
+    window.location.href = "index.html";
+
 }

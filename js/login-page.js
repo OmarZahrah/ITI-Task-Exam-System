@@ -1,16 +1,31 @@
+import { getUsers } from "./utils.js";
 
-const Form = document.getElementById("registrationForm");
-const Email = document.getElementById("email");
-const Password = document.getElementById("password");
+const form = document.getElementById("registrationForm");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
 
-Form.addEventListener("submit", function (e) {
+form.addEventListener("submit", function (e) {
+
     e.preventDefault();
-    const users = getUsers();
-    const found = users.find(u => u.email === Email.value && u.password === Password.value);
-    if (found) {
-        localStorage.setItem("currentUser", JSON.stringify(found));
+
+    let users = getUsers();
+
+    let foundUser = users.find(function (user) {
+        return user.email === email.value && user.password === password.value;
+    });
+
+    if (foundUser) {
+
+        localStorage.setItem("currentUser", JSON.stringify(foundUser));
+
+        alert("Login Successful");
+
         window.location.href = "quiz.html";
+
     } else {
+
         alert("Email or Password incorrect");
+
     }
+
 });

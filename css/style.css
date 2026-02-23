@@ -18,7 +18,7 @@
   --text-light: #f8fafc;
   --text-muted: #94a3b8;
   --border: #334155;
-  --shadow: rgba(0, 0, 0, 0.5);
+  --shadow: #00000080;
 }
 
 * {
@@ -32,7 +32,7 @@ html {
 }
 
 ::selection {
-  background: rgba(99, 102, 241, 0.3);
+  background: #6366F14D;
   color: var(--text-light);
 }
 
@@ -57,12 +57,12 @@ body {
 }
 
 .navbar-custom {
-  background: rgba(30, 41, 59, 0.8);
+  background: #1E293BCC;
   backdrop-filter: blur(20px);
   box-shadow:
-    0 4px 30px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(99, 102, 241, 0.2);
-  border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+    0 4px 30px #00000099,
+    0 0 0 1px #6366F133;
+  border-bottom: 1px solid #6366F14D;
   padding: 1.2rem 2rem !important;
 }
 
@@ -78,9 +78,9 @@ body {
 }
 
 .btn-navbar {
-  background: rgba(99, 102, 241, 0.1);
+  background: #6366F11A;
   color: var(--text-light);
-  border: 1px solid rgba(99, 102, 241, 0.4);
+  border: 1px solid #6366F166;
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -90,7 +90,7 @@ body {
   border-color: var(--primary);
   color: white;
   transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 20px #6366F166;
 }
 
 .btn {
@@ -114,7 +114,7 @@ body {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: #FFFFFF33;
   transform: translate(-50%, -50%);
   transition:
     width 0.5s,
@@ -128,7 +128,7 @@ body {
 
 .btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 24px #00000066;
 }
 
 .btn:active:not(:disabled) {
@@ -156,7 +156,7 @@ body {
     var(--primary-light) 0%,
     var(--primary) 100%
   );
-  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4) !important;
+  box-shadow: 0 8px 24px #6366F166 !important;
   color: white;
 }
 
