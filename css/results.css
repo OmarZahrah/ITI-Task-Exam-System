@@ -1,6 +1,6 @@
 body {
     background: #171c2e;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     color: white;
 }
@@ -17,6 +17,7 @@ body {
 
     background: #1d243b;
     border-bottom: 2px solid #2c3553;
+    
 
 }
 
@@ -34,7 +35,7 @@ body {
 
 .navbar button {
 
-        background: #373d54;
+    background: #373d54;
     border: none;
     padding: 8px 15px;
     color: white;
@@ -42,6 +43,7 @@ body {
     border-radius: 5px;
 
 }
+
 button:hover {
     background: linear-gradient(135deg, #2575fc, #6a11cb);
     transform: scale(1.05);
@@ -81,6 +83,8 @@ button:hover {
     margin: 15px 0;
 
     font-size: 18px;
+    text-align: center;
+    align-items: center;
 
 }
 
@@ -95,7 +99,7 @@ button:hover {
 }
 
 
-#viewAnswers{
+#viewAnswers {
 
     background: #373d54;
 
@@ -114,6 +118,7 @@ button:hover {
 
 
 }
+
 #viewAnswers:hover {
     background: linear-gradient(135deg, #2575fc, #6a11cb);
     transform: scale(1.05);
