@@ -123,3 +123,18 @@ button:hover {
     background: linear-gradient(135deg, #2575fc, #6a11cb);
     transform: scale(1.05);
 }
+  .progress-container {
+      width: 100%;
+      background: #2c3553;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+      height: 20px;
+  }
+
+  .progress-bar {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+      transition: width 1s ease;
+  }

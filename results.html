@@ -1,69 +1,49 @@
+
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Results</title>
-    
-    <link rel="stylesheet" href="css/results.css" />
-  
-    </head>
-    
-    <body>
-      
-        <nav class="navbar">
-      
-          <div class="nav-left">
-            <span class="icon">📊</span>
-            <h2>Results</h2>
-          </div>
-      
-          <button id="logoutBtn">Logout</button>
-      
-        </nav>
-      
-      
-      
-        <div class="results-card">
-      
-          <h3>Your Quiz Result</h3>
-      
-          <div class="result-info">
-      
-            <p>Total Questions:</p>
-            <span id="totalQuestions"></span>
-      
-          </div>
-      
-          <div class="result-info">
-      
-            <p>Your Score:</p>
-            <span id="score">%</span>
-      
-          </div>
-      
-          <div class="result-info">
-      
-            <p>Percentage:</p>
-            <span id="percentage"></span> 
-      
-          </div>
-      
-        </div>
-      
-      
-      
-        <div class="answers-btn">
-      
-          <button id="viewAnswers">View Answers</button>
-      
-        </div>
-      
-      
-        <script src="js/utils.js"></script>
-        <script src="js/questions.js"></script>
-        <script src="js/auth.js"></script>
-        <script src="js/results-page.js"></script>
-      
-      </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results</title>
+  <link rel="stylesheet" href="css/results.css" />
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="icon">📊</span>
+      <h2>Results</h2>
+    </div>
+    <button id="logoutBtn">Logout</button>
+  </nav>
+
+  <div class="results-card">
+    <h3>Your Quiz Result</h3>
+    <div class="result-info">
+      <p>Total Questions:</p>
+      <span id="totalQuestions"></span>
+    </div>
+    <div class="result-info">
+      <p>Your Score:</p>
+      <span id="score">%</span>
+    </div>
+    <div class="result-info">
+      <p>Percentage:</p>
+      <span id="percentage"></span>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+  </div>
+
+  <div class="answers-btn">
+    <button id="viewAnswers">View Answers</button>
+  </div>
+
+  <script type="module" src="js/results-page.js"></script>
+</body>
+
 </html>
