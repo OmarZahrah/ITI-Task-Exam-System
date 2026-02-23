@@ -1,27 +1,16 @@
-const form = document.getElementById("registrationForm");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
 
-form.addEventListener("submit", function (e) {
+const Form = document.getElementById("registrationForm");
+const Email = document.getElementById("email");
+const Password = document.getElementById("password");
 
+Form.addEventListener("submit", function (e) {
     e.preventDefault();
-
-    var users = JSON.parse(localStorage.getItem("users")) || [];
-
-    var foundUser = users.find(function (user) {
-        return user.email === email.value && user.password === password.value;
-    });
-
-    if (foundUser) {
-
-        localStorage.setItem("currentUser", JSON.stringify(foundUser));
-
-        alert("Login Successful");
-
+    const users = getUsers();
+    const found = users.find(u => u.email === Email.value && u.password === Password.value);
+    if (found) {
+        localStorage.setItem("currentUser", JSON.stringify(found));
         window.location.href = "quiz.html";
-
     } else {
         alert("Email or Password incorrect");
     }
-
 });
