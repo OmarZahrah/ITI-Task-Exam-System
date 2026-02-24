@@ -1,12 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background: #171c2e;
-  margin: 0;
-  padding: 0;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  padding-top: 80px;
 }
 
 .form-container {
@@ -18,63 +23,71 @@ body {
   width: 100%;
   max-width: 450px;
   color: white;
-  margin: 40px auto;
 }
 
 h1 {
   text-align: center;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 24px;
 }
 
 label {
   display: block;
-  margin: 10px 0 5px;
+  margin: 15px 0 8px;
   font-weight: bold;
+  font-size: 14px;
 }
 
-input[type="text"],
-input[type="password"] {
+select {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #2c3553;
   border-radius: 5px;
   font-size: 14px;
-  outline: none;
-  transition: 0, 3s;
   background-color: #171c2e;
   color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-input[type="text"]::placeholder,
-input[type="password"]::placeholder {
-  color: var(--text-light);
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-  border-color: #6a11cb;
+select:focus {
   outline: none;
-  box-shadow:
-    0 0 5px #fff,
-    0 0 20px rgba(106, 17, 203, 0.35);
-  transition: 0.2s ease;
+  border-color: #6366f1;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
 }
 
 button {
   width: 100%;
   padding: 12px;
-  background: #373d54;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
+  transition: 0.3s;
   margin-top: 20px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+}
+
+.form-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-link a {
+  color: #6366f1;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.form-link a:hover {
+  text-decoration: underline;
 }
