@@ -28,4 +28,4 @@ form.addEventListener("submit", function (e) {
     } else {
         alert("Email or Password incorrect");
     }
-});
+}); 
