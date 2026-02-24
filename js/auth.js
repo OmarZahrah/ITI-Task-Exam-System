@@ -1,9 +1,27 @@
-import { getCurrentUser } from "./utils.js";
+import { loadData, removeData } from "./utils.js";
 
-const user = getCurrentUser();
+export function getCurrentUser() {
+    return JSON.parse(localStorage.getItem("currentUser"));
+}
 
-if (!user) {
+export function checkAuth() {
+    const user = getCurrentUser();
+    if (!user) {
+        window.location.href = "index.html";
+    }
+}
 
-    window.location.href = "index.html";
+export function checkQuizAccess() {
+    const user = getCurrentUser();
+    if (user && user.hasTakenQuiz) {
+        alert("You have already taken the quiz!");
+        window.location.href = "results.html";
+    }
+}
 
+export function logout() {
+    if (confirm("Are you sure you want to logout?")) {
+        removeData("currentUser");
+        window.location.href = "index.html";
+    }
 }

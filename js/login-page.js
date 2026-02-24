@@ -1,31 +1,31 @@
-import { getUsers } from "./utils.js";
+
+import { getUsers, updateCurrentUser } from "./utils.js";
 
 const form = document.getElementById("registrationForm");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 
 form.addEventListener("submit", function (e) {
-
     e.preventDefault();
 
     let users = getUsers();
 
-    let foundUser = users.find(function (user) {
-        return user.email === email.value && user.password === password.value;
-    });
+    let foundUser = users.find(user =>
+        user.email === email.value.trim() && user.password === password.value.trim()
+    );
 
     if (foundUser) {
-
-        localStorage.setItem("currentUser", JSON.stringify(foundUser));
+        updateCurrentUser(foundUser);
 
         alert("Login Successful");
 
-        window.location.href = "quiz.html";
+        if (foundUser.hasTakenQuiz) {
+            window.location.href = "results.html"; 
+        } else {
+            window.location.href = "quiz.html"; 
+        }
 
     } else {
-
         alert("Email or Password incorrect");
-
     }
-
 });

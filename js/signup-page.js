@@ -1,4 +1,5 @@
-import { validateInput, emailRegex, passwordRegex, getUsers,saveUsers} from "./utils.js";
+
+import { validateInput, emailRegex, passwordRegex, getUsers, saveUsers } from "./utils.js";
 
 const form = document.getElementById("registrationForm");
 
@@ -36,11 +37,23 @@ form.addEventListener("submit", function (e) {
 
     let users = getUsers();
 
+    let existingUser = users.find(function (user) {
+        return user.email === email.value;
+    });
+
+    if (existingUser) {
+
+        alert("This email already exists");
+        return;
+
+    }
+
     let user = {
         firstname: firstname.value,
         lastname: lastname.value,
         email: email.value,
-        password: password.value
+        password: password.value,
+        hasTakenQuiz: false
     };
 
     users.push(user);
