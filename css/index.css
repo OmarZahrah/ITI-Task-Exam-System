@@ -1,0 +1,11 @@
+/* Index page styles */
+
+.hero-section {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+.hero-section h2 {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
