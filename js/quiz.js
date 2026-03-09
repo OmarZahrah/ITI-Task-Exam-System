@@ -13,13 +13,15 @@ import {
   isAnswerCorrect,
 } from "./questions.js";
 
+const QUIZ_DURATION_MINUTES = 30;
+
 export class Quiz {
   constructor(questions) {
     this.questions = questions;
     this.currentIndex = 0;
     this.answers = new Array(this.questions.length).fill(null);
     this.flags = [];
-    this.timer = createTimer(1800);
+    this.timer = createTimer(QUIZ_DURATION_MINUTES * 60);
     this.isSubmitted = false;
   }
 
