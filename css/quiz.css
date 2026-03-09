@@ -6,9 +6,9 @@
 .timer {
   min-width: 92px;
   padding: 0.45rem 0.8rem;
-  border: 1px solid #F59E0B59;
+  border: 1px solid #f59e0b59;
   border-radius: 8px;
-  background: #F59E0B1F;
+  background: #f59e0b1f;
   color: var(--warning);
   font-size: 1.2rem;
   font-weight: 700;
@@ -16,21 +16,19 @@
 }
 
 .timer.danger {
-  border-color: #EF44448C;
-  background: #EF444429;
+  border-color: #ef44448c;
+  background: #ef444429;
   color: var(--danger);
 }
 
 .quiz-sidebar,
 .question-card {
-  background: #1E293BAD;
+  background: #1e293bad;
   border: 1px solid var(--border);
   border-radius: 12px;
 }
 
 .quiz-sidebar {
-  position: sticky;
-  top: 100px;
   padding: 1.25rem;
 }
 
@@ -41,7 +39,7 @@
 .progress-bar-wrapper {
   width: 100%;
   height: 24px;
-  background: #0F172A99;
+  background: #0f172a99;
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
@@ -73,19 +71,19 @@
   height: 46px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: #0F172A8C;
+  background: #0f172a8c;
   color: var(--text-muted);
   font-weight: 600;
 }
 
-.question-btn:hover:not(:disabled) {
+.question-btn:hover {
   border-color: var(--primary);
   color: var(--text-light);
 }
 
 .question-btn.current {
   border-color: var(--primary);
-  background: #6366F138;
+  background: #6366f138;
   color: var(--text-light);
 }
 
@@ -119,7 +117,7 @@
 .flag-btn {
   width: 36px;
   height: 36px;
-  border: 1px solid #FFFFFF4D;
+  border: 1px solid #ffffff4d;
   border-radius: 8px;
   background: transparent;
   color: #fff;
@@ -130,7 +128,7 @@
 .flag-btn:hover,
 .flag-btn.active {
   border-color: var(--warning);
-  background: #F59E0B40;
+  background: #f59e0b40;
 }
 
 .question-text {
@@ -153,18 +151,18 @@
   padding: 0.9rem 1rem;
   border: 1px solid var(--border);
   border-radius: 10px;
-  background: #0F172A80;
+  background: #0f172a80;
   color: var(--text-light);
 }
 
 .choice:hover {
   border-color: var(--primary);
-  background: #6366F11F;
+  background: #6366f11f;
 }
 
 .choice.selected {
   border-color: var(--primary);
-  background: #6366F133;
+  background: #6366f133;
 }
 
 .choice input {
@@ -180,7 +178,7 @@
 
 .action-buttons {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.8rem;
   padding: 1.3rem 1.25rem 1.25rem;
 }
