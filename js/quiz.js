@@ -13,7 +13,7 @@ import {
   isAnswerCorrect,
 } from "./questions.js";
 
-const QUIZ_DURATION_MINUTES = 30;
+const QUIZ_DURATION_MINUTES = 10;
 
 export class Quiz {
   constructor(questions) {

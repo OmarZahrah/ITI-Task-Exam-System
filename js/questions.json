@@ -1,25 +1,62 @@
 [
   {
     "id": 1,
-    "text": "What does HTML stand for?",
-    "choices": [
-      "Hyper Text Markup Language",
-      "High Text Machine Language",
-      "Hyperlinks and Text Markup Language",
-      "Home Tool Markup Language"
-    ],
-    "correctAnswer": 0
+    "text": "Which keyword is used to declare a variable in JavaScript?",
+    "choices": ["int", "let", "define", "varName"],
+    "correctAnswer": 1
   },
   {
     "id": 2,
-    "text": "Which CSS property controls text size?",
-    "choices": ["font-style", "text-size", "font-size", "text-style"],
+    "text": "How do you write a single-line comment in JavaScript?",
+    "choices": ["<!-- comment -->", "** comment", "// comment", "## comment"],
     "correctAnswer": 2
   },
   {
     "id": 3,
-    "text": "Which symbol is used for JavaScript comments (single line)?",
-    "choices": ["<!-- -->", "//", "**", "##"],
+    "text": "Which method prints a message to the browser console?",
+    "choices": ["console.log()", "print()", "echo()", "log.console()"],
+    "correctAnswer": 0
+  },
+  {
+    "id": 4,
+    "text": "Which data type is used for true/false values?",
+    "choices": ["String", "Boolean", "Number", "Object"],
+    "correctAnswer": 1
+  },
+  {
+    "id": 5,
+    "text": "What is the result of 2 + '2' in JavaScript?",
+    "choices": ["4", "22", "NaN", "Error"],
+    "correctAnswer": 1
+  },
+  {
+    "id": 6,
+    "text": "Which symbol is used for strict equality comparison?",
+    "choices": ["=", "==", "===", "!="],
+    "correctAnswer": 2
+  },
+  {
+    "id": 7,
+    "text": "How do you create an array in JavaScript?",
+    "choices": ["{}", "()", "[]", "<>"],
+    "correctAnswer": 2
+  },
+  {
+    "id": 8,
+    "text": "Which function converts a string to an integer?",
+    "choices": ["toInt()", "Number.parse()", "parseInt()", "int()"],
+    "correctAnswer": 2
+  },
+  {
+    "id": 9,
+    "text": "Which keyword is used to define a function?",
+    "choices": ["func", "function", "def", "method"],
+    "correctAnswer": 1
+  },
+  {
+    "id": 10,
+    "text": "How do you access the first element of an array named nums?",
+    "choices": ["nums(0)", "nums[0]", "nums{0}", "nums.first"],
     "correctAnswer": 1
   }
 ]
