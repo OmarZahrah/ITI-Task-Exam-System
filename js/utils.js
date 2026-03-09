@@ -1,44 +1,38 @@
- export function getUsers() {
-    return JSON.parse(localStorage.getItem("users") || "[]");
+export function getUsers() {
+  return JSON.parse(localStorage.getItem("users") || "[]");
 }
 
- export function saveUsers(users) {
-    
-    localStorage.setItem("users", JSON.stringify(users));
+export function saveUsers(users) {
+  localStorage.setItem("users", JSON.stringify(users));
 }
 
- export function getCurrentUser() {
-    return JSON.parse(localStorage.getItem("currentUser"));
+export function getCurrentUser() {
+  return JSON.parse(localStorage.getItem("currentUser"));
 }
 
- export function logout() {
-    localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
+export function logout() {
+  localStorage.removeItem("currentUser");
+  window.location.href = "index.html";
 }
 export function validateInput(input, regex, errorId, message) {
-
   input.addEventListener("input", function () {
-
     input.classList.remove("error", "success");
 
     if (input.value.trim() === "") {
       input.classList.add("error");
       document.getElementById(errorId).textContent = "Required";
-    }
-
-    else if (regex && !regex.test(input.value)) {
+    } else if (regex && !regex.test(input.value)) {
       input.classList.add("error");
       document.getElementById(errorId).textContent = message;
-    }
-
-    else {
+    } else {
       input.classList.add("success");
-      document.getElementById(errorId).textContent = "";}
-    });
-  }
+      document.getElementById(errorId).textContent = "";
+    }
+  });
+}
 
- export const emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
- export const passwordRegex = /^.{5,}$/;
+export const emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+export const passwordRegex = /^.{5,}$/;
 
 export function saveData(key, value) {
   localStorage.setItem(key, JSON.stringify(value));

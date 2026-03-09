@@ -90,25 +90,15 @@ function showChoices(question) {
   choicesContainer.innerHTML = "";
 
   question.choices.forEach((choice, index) => {
-    const choiceDiv = document.createElement("div");
-    choiceDiv.className = "choice";
+    const choiceDiv = createChoiceElement(
+      choice,
+      index,
+      question.userAnswer === index,
+    );
+    const input = choiceDiv.querySelector("input");
 
-    const input = document.createElement("input");
-    input.type = "radio";
-    input.name = "answer";
     input.id = `choice-${index}`;
     input.checked = question.userAnswer === index;
-
-    const label = document.createElement("label");
-    label.htmlFor = `choice-${index}`;
-    label.textContent = choice;
-
-    choiceDiv.appendChild(input);
-    choiceDiv.appendChild(label);
-
-    if (input.checked) {
-      choiceDiv.classList.add("selected");
-    }
 
     choiceDiv.addEventListener("click", () => {
       input.checked = true;
@@ -145,6 +135,7 @@ function showQuestionList() {
   quiz.questions.forEach((question, index) => {
     const btn = document.createElement("button");
     btn.className = "question-btn";
+    btn.type = "button";
     btn.textContent = index + 1;
 
     if (index === quiz.currentIndex) {
@@ -165,6 +156,29 @@ function showQuestionList() {
 
     questionList.appendChild(btn);
   });
+}
+
+function createChoiceElement(choiceText, index, isSelected) {
+  const choiceDiv = document.createElement("div");
+  choiceDiv.className = "choice";
+
+  const input = document.createElement("input");
+  input.type = "radio";
+  input.name = "answer";
+  input.id = `choice-${index}`;
+  input.checked = isSelected;
+
+  const label = document.createElement("label");
+  label.htmlFor = `choice-${index}`;
+  label.textContent = choiceText;
+
+  if (isSelected) {
+    choiceDiv.classList.add("selected");
+  }
+
+  choiceDiv.appendChild(input);
+  choiceDiv.appendChild(label);
+  return choiceDiv;
 }
 
 function updateProgress() {
