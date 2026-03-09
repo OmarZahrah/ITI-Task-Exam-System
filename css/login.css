@@ -1,0 +1,80 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: #171c2e;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding-top: 80px;
+}
+
+.form-container {
+  background: #1d243b;
+  padding: 40px;
+  border-radius: 15px;
+  border: 2px solid #2c3553;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 450px;
+  color: white;
+  margin: 40px auto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: 0, 3s;
+  background-color: #171c2e;
+  color: #fff;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: var(--text-light);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #6a11cb;
+  outline: none;
+  box-shadow:
+    0 0 5px #fff,
+    0 0 20px rgba(106, 17, 203, 0.35);
+  transition: 0.2s ease;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #373d54;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+  margin-top: 20px;
+}

@@ -11,5 +11,70 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/signup.css" />
   </head>
-  <body></body>
+  <body>
+    <nav class="navbar navbar-custom fixed-top">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">🎓 Quiz System</span>
+      </div>
+    </nav>
+    <div class="form-container">
+      <h1>create account</h1>
+      <form id="registrationForm">
+        <label for="firstName">FirstName:</label>
+        <input
+          type="text"
+          id="firstname"
+          name="firstname"
+          placeholder="firstname"
+          required
+        />
+        <span class="error" id="firstnameError"></span>
+
+        <label for="Lastname">LastName:</label>
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          placeholder="lastname"
+          required
+        />
+        <span class="error" id="lastnameError"></span>
+
+        <label for="email">Email:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="email"
+          required
+        />
+        <span class="error" id="emailError"></span>
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="password"
+          required
+        />
+        <span class="error" id="passwordError"></span>
+
+        <label for="confirm password">Confirm Password:</label>
+        <input
+          type="password"
+          id="cpassword"
+          name="confirmpassword"
+          placeholder="confirmpassword"
+          required
+        />
+        <span class="error" id="confirmpassworderror"></span>
+        <button type="submit">signup</button>
+      </form>
+      <div class="form-link text-center mt-3">
+        Already have an account? <a href="login.html">Log In</a>
+      </div>
+    </div>
+    <script type="module" src="js/signup-page.js"></script>
+  </body>
 </html>
