@@ -1,140 +1,113 @@
 body {
-    background: #171c2e;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    color: white;
+  background: #171c2e;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  color: white;
 }
 
-
-
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 15px 30px;
 
-    padding: 15px 30px;
-
-    background: #1d243b;
-    border-bottom: 2px solid #2c3553;
-    
-
+  background: #1d243b;
+  border-bottom: 2px solid #2c3553;
 }
 
 .nav-left {
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .icon {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .navbar button {
-
-    background: #373d54;
-    border: none;
-    padding: 8px 15px;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-
+  background: #373d54;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 button:hover {
-    background: linear-gradient(135deg, #2575fc, #6a11cb);
-    transform: scale(1.05);
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
 }
 
-
-
-
 .results-card {
+  width: 400px;
+  margin: 80px auto;
 
-    width: 400px;
-    margin: 80px auto;
+  background: #1d243b;
 
-    background: #1d243b;
+  padding: 30px;
 
-    padding: 30px;
+  border-radius: 10px;
 
-    border-radius: 10px;
+  text-align: center;
 
-    text-align: center;
-
-    border: 2px solid #2c3553;
-
+  border: 2px solid #2c3553;
 }
 
 .results-card h3 {
-
-    margin-bottom: 25px;
-
+  margin-bottom: 25px;
 }
 
 .result-info {
+  display: flex;
+  justify-content: space-between;
 
-    display: flex;
-    justify-content: space-between;
+  margin: 15px 0;
 
-    margin: 15px 0;
-
-    font-size: 18px;
-    text-align: center;
-    align-items: center;
-
+  font-size: 18px;
+  text-align: center;
+  align-items: center;
 }
-
-
-
 
 .answers-btn {
-
-    text-align: center;
-    margin-top: 30px;
-
+  text-align: center;
+  margin-top: 30px;
 }
 
-
 #viewAnswers {
+  background: #373d54;
 
-    background: #373d54;
+  border: none;
 
-    border: none;
+  padding: 12px 25px;
 
-    padding: 12px 25px;
+  color: white;
 
-    color: white;
+  font-size: 16px;
 
-    font-size: 16px;
+  border-radius: 6px;
 
-    border-radius: 6px;
-
-    cursor: pointer;
-    width: 20%;
-
-
+  cursor: pointer;
+  width: 20%;
 }
 
 #viewAnswers:hover {
-    background: linear-gradient(135deg, #2575fc, #6a11cb);
-    transform: scale(1.05);
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
 }
-  .progress-container {
-      width: 100%;
-      background: #2c3553;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-top: 20px;
-      height: 20px;
-  }
+.progress-container {
+  width: 100%;
+  background: #2c3553;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  height: 20px;
+}
 
-  .progress-bar {
-      height: 100%;
-      width: 0;
-      background: linear-gradient(135deg, #2575fc, #6a11cb);
-      transition: width 1s ease;
-  }
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transition: width 1s ease;
+}
