@@ -3,6 +3,7 @@ import { getUsers, updateCurrentUser } from "./utils.js";
 const form = document.getElementById("registrationForm");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
+const passwordError = document.getElementById("passwordError");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -17,8 +18,7 @@ form.addEventListener("submit", function (e) {
 
   if (foundUser) {
     updateCurrentUser(foundUser);
-
-    alert("Login Successful");
+    passwordError.textContent = "";
 
     if (foundUser.hasTakenQuiz) {
       window.location.href = "results.html";
@@ -26,6 +26,6 @@ form.addEventListener("submit", function (e) {
       window.location.href = "quiz-settings.html";
     }
   } else {
-    alert("Email or Password incorrect");
+    passwordError.textContent = "Email or password is incorrect";
   }
 });

@@ -42,11 +42,12 @@ form.addEventListener("submit", function (e) {
     });
 
     if (existingUser) {
-
-        alert("This email already exists");
+        document.getElementById("emailError").textContent = "This email already exists";
         return;
 
     }
+
+    document.getElementById("emailError").textContent = "";
 
     let user = {
         firstname: firstname.value,
@@ -59,8 +60,6 @@ form.addEventListener("submit", function (e) {
     users.push(user);
 
     saveUsers(users);
-
-    alert("Signup Successful");
 
     window.location.href = "login.html";
 
