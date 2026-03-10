@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #171c2e;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background: #1d243b;
+  padding: 40px;
+  border-radius: 15px;
+  border: 2px solid #2c3553;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 450px;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+label {
+  display: block;
+  margin: 15px 0 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #2c3553;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #171c2e;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.35);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+}
+
+.form-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-link a {
+  color: #6366f1;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.form-link a:hover {
+  text-decoration: underline;
+}
