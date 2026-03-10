@@ -1,6 +1,9 @@
 import { saveData } from "./utils.js";
+import { checkAuth } from "./auth.js";
 
 const form = document.getElementById("settingsForm");
+
+checkAuth();
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();

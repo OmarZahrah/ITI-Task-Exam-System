@@ -23,7 +23,7 @@ form.addEventListener("submit", function (e) {
     if (foundUser.hasTakenQuiz) {
       window.location.href = "results.html";
     } else {
-      window.location.href = "quiz.html";
+      window.location.href = "quiz-settings.html";
     }
   } else {
     alert("Email or Password incorrect");

@@ -1,4 +1,5 @@
 import { loadData } from "./utils.js";
+import { checkAuth } from "./auth.js";
 
 const reviewSummary = document.getElementById("reviewSummary");
 const answersList = document.getElementById("answersList");
@@ -8,6 +9,8 @@ const wrongValue = document.getElementById("wrongValue");
 const emptyState = document.getElementById("emptyState");
 
 function initAnswersPage() {
+  checkAuth();
+
   const result = loadData("quizResult");
 
   if (!result || !result.questions || result.questions.length === 0) {

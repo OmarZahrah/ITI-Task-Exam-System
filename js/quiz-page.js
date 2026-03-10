@@ -6,6 +6,7 @@ import {
   getFormattedTime,
   isTimerDanger,
 } from "./utils.js";
+import { checkAuth } from "./auth.js";
 
 let quiz = null;
 let isTimeExpired = false;
@@ -25,6 +26,8 @@ const submitBtn = document.getElementById("submitBtn");
 const logoutBtn = document.getElementById("logoutBtn");
 
 async function init() {
+  checkAuth();
+
   quiz = await Quiz.create();
 
   const savedState = loadData("quiz");
