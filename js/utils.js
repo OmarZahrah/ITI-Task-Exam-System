@@ -14,6 +14,9 @@ export function logout() {
   localStorage.removeItem("currentUser");
   window.location.href = "index.html";
 }
+export function updateCurrentUser(user) {
+  localStorage.setItem("currentUser", JSON.stringify(user));
+}
 export function validateInput(input, regex, errorId, message) {
   input.addEventListener("input", function () {
     input.classList.remove("error", "success");
